@@ -1,0 +1,13 @@
+torch==2.7.1
+opencv-python
+ultralytics==8.3.170
+supervision[tracker]
+numpy
+redis
+flatbuffers
+humanfriendly
+ncnn==1.0.20250503
+onnx
+onnxruntime
+onnxslim
+protobuf
