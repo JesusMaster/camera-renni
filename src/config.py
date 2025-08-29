@@ -7,7 +7,7 @@ class Config:
     IP = "adminrenni.ddns.net"
     PORT = "554"
     CHANNEL = "1"
-    MODEL_PATH = "./models/model_480_80_12s_140825_ncnn_model/"
+    MODEL_PATH = "./models/model_480_80_12n_140825_ncnn_model/"
     CONFIDENCE_THRESHOLD = 0.55
     CAPTURE_INTERVAL = 0.5
     CAPTURE_DIR = "capture"
@@ -36,7 +36,7 @@ class Config:
     SHOW_ANNOTATIONS = True
 
     # Redis settings
-    REDIS_URL = ""
+    REDIS_URL = "redis://default:6XfuHicxU4GSGsKd0v6dkS50hH2YtfqH@redis-12116.c240.us-east-1-3.ec2.redns.redis-cloud.com:12116"
 
     # Frame capture settings
     ENABLE_CAPTURE = False

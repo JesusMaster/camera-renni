@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO('./models/model_480_80_12s_140825.pt')
+model = YOLO('./models/model_480_80_12n_140825.pt')
 
 model.export(format = 'ncnn',simplify=True,dynamic=False,opset=11,imgsz=480,half=True) # Export the model to NCNN format with simplification and fixed input size
 

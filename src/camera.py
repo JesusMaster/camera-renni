@@ -17,7 +17,7 @@ class CameraStream:
         self.cap = None
         self.use_video_file = use_video_file
         self.video_path = video_path
-        self.url = f"rtsp://{self.username}:{self.password}@{self.ip}:{self.port}/cam/realmonitor?channel={self.channel}&subtype=0"
+        self.url = f"rtsp://{self.username}:{self.password}@{self.ip}:{self.port}/cam/realmonitor?channel={self.channel}&subtype=0&fps=15"
         
         # Increase timeout to 60 seconds (60,000,000 microseconds)
         os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;tcp|timeout;60000000|stimeout;60000000"
@@ -56,6 +56,8 @@ class CameraStream:
             print(f"Attempting to connect to: {self.url}")
             for attempt in range(self.max_retries):
                 self.cap = cv2.VideoCapture(self.url, cv2.CAP_FFMPEG)
+                self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'HEVC')) # puede ser H264
+                self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 3)
                 if self.cap.isOpened():
                     print("Connection successful!")
                     self.fps = self._get_actual_fps()
