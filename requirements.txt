@@ -1,13 +1,48 @@
-torch==2.7.1
-opencv-python
-ultralytics==8.3.170
-supervision[tracker]
-numpy
-redis
-flatbuffers
-humanfriendly
-ncnn==1.0.20250503
-onnx
-onnxruntime
-onnxslim
-protobuf
+# 🚀 DEPENDENCIAS OPTIMIZADAS PARA CAMERA-RENNI
+# Instalación recomendada: pip install -r requirements_optimized.txt
+
+# ⚡ PyTorch - Motor principal de ML
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# 🎯 Detección de objetos y visión por computadora
+ultralytics>=8.0.200
+opencv-python-headless>=4.8.0
+
+# 📊 Tracking y supervisión
+supervision>=0.16.0
+
+# 🔢 Computación numérica
+numpy>=1.24.0
+
+# 💾 Base de datos y persistencia
+redis>=4.5.0
+
+# 🖥️ Monitoreo del sistema
+psutil>=5.9.0
+
+# 📡 Protocolos y serialización
+flatbuffers>=23.0.0
+protobuf>=4.21.0
+
+# 🤖 Optimizaciones de ML
+onnx>=1.14.0
+onnxruntime>=1.15.0
+onnxslim>=0.1.0
+
+# 🍓 Optimizaciones para dispositivos embebidos
+ncnn>=1.0.20250503
+
+# 📝 Utilidades
+humanfriendly>=10.0
+
+# 🎮 GPU Monitoring (opcional pero recomendado)
+# pynvml>=11.0.0  # Descomenta si tienes GPU NVIDIA
+
+# 📊 Dependencias adicionales para testing
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# 🔧 Para desarrollo y debugging
+tqdm>=4.65.0
